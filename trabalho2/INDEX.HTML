@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Configuração do Sistema</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+  <div class="layout">
+    <!-- Sidebar -->
+    <nav class="sidebar">
+      <div class="sidebar-header">
+        <img id="logo-fixed" src="" alt="Logo" style="width:40px; display:none; margin-right:10px;">
+        <span class="sidebar-title">Configurações</span>
+      </div>
+      <ul class="sidebar-menu">
+        <li class="active" data-tab="appearance"><span class="material-icons">palette</span><span>Aparência</span></li>
+        <li data-tab="logo"><span class="material-icons">photo</span><span>Logo</span></li>
+        <li data-tab="font"><span class="material-icons">font_download</span><span>Fonte</span></li>
+        <li data-tab="systemname"><span class="material-icons">edit</span><span>Nome do sistema</span></li>
+        <li data-tab="relatorio"><span class="material-icons">description</span><span>Relatórios</span></li>
+      </ul>
+      <div class="config-group" style="margin-top:20px;">
+        <button onclick="window.location.href='../index.html'">Voltar para o Menu</button>
+
+</button>
+
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <h2 id="nome-sistema">Nome do Sistema</h2>
+
+      <!-- Aparência -->
+      <div class="card tab-content" id="tab-appearance">
+        <div class="config-group">
+          <label for="corFundo">Cor de fundo:</label>
+          <select id="corFundo">
+            <option value="#f5f5f7">Branco Pastel</option>
+            <option value="#d6e4f0">Azul Pastel</option>
+            <option value="#f0d6f0">Rosa Pastel</option>
+            <option value="#d6f0e1">Verde Pastel</option>
+            <option value="#fff5d6">Amarelo Pastel</option>
+            <option value="#f0e0d6">Bege Pastel</option>
+          </select>
+        </div>
+        <button id="btnSalvarCor">Salvar</button>
+      </div>
+
+      <!-- Logo -->
+      <div class="card tab-content" id="tab-logo" style="display:none">
+        <div class="config-group">
+          <label for="logoSistema">Logo do sistema:</label>
+          <input type="file" id="logoSistema" accept="image/*" />
+          <img id="logoPreview" class="logo-preview" src="" alt="Logo Preview" />
+        </div>
+        <button id="btnSalvarLogo">Salvar</button>
+        <button id="btnRemoverLogo" style="margin-top:10px; background:#d32f2f;">Remover Logo</button>
+      </div>
+
+      <!-- Fonte -->
+      <div class="card tab-content" id="tab-font" style="display:none">
+        <div class="config-group">
+          <label for="fonteSistema">Fonte:</label>
+          <select id="fonteSistema">
+            <option value="'Montserrat', Arial, sans-serif">Montserrat</option>
+            <option value="'Comic Sans MS', cursive, sans-serif">Comic Sans MS</option>
+          </select>
+        </div>
+        <div class="config-group">
+          <label for="fonteTamanho">Tamanho da fonte:</label>
+          <select id="fonteTamanho">
+            <option value="14px">Pequena</option>
+            <option value="16px" selected>Média</option>
+            <option value="20px">Grande</option>
+            <option value="24px">Extra Grande</option>
+          </select>
+        </div>
+        <button id="btnSalvarFonte">Salvar</button>
+      </div>
+
+      <!-- Nome do Sistema -->
+      <div class="card tab-content" id="tab-systemname" style="display:none">
+        <div class="config-group">
+          <label for="nomeSistemaInput">Nome do sistema:</label>
+          <input type="text" id="nomeSistemaInput" placeholder="Digite o nome do sistema" />
+        </div>
+        <button id="btnSalvarNome">Salvar</button>
+      </div>
+
+      <!-- Relatórios -->
+      <div class="card tab-content" id="tab-relatorio" style="display:none">
+        <h3 style="margin-top:0">Emitir Relatório de Configurações</h3>
+        <div class="config-group">
+          <button id="btnEmitirRelatorioTxt">Emitir relatório TXT</button>
+          <button id="btnEmitirRelatorioXml" style="margin-top:10px">Emitir relatório XML</button>
+        </div>
+      </div>
+         <div class="item">
+      <a href="teste.html">🔧 Voltar para página de teste</a>
+    </div>
+  </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
